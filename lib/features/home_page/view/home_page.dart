@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<HomePageViewModel>(
+    return Consumer<HomePageViewModel>( 
       builder: (context, homePageViewModel, child) => Scaffold(
         appBar: AppBar(
           title: const Text('Tejas Palyekar'),
