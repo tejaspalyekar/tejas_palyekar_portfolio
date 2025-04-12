@@ -45,6 +45,8 @@ dependencies:
   typewritertext: ^3.0.9
   card_swiper: ^3.0.1
   release_to_trigger: ^0.0.6
+  firebase_core: ^3.13.0
+  photo_view: ^0.14.0
 
 dev_dependencies:
   flutter_test:
@@ -70,14 +72,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets\images\profile_image.jpeg
-    - assets\lottie\scroll_down_lottie.json
-    - assets\lottie\light_scroll_down_lottie.json
-    - assets\icons\whatsAppIcon.png
-    - assets\icons\github_icon.png
-    - assets\icons\instagram_icon.png
-    - assets\icons\linkdine_icon.png
-    - assets\icons\gmail_icon.png
+    - assets/lottie/scroll_down_lottie.json
+    - assets/lottie/light_scroll_down_lottie.json
+    - assets/icons/whatsAppIcon.png
+    - assets/icons/github_icon.png
+    - assets/icons/linkdine_icon.png
+    - assets/icons/gmail_icon.png
+    - assets/images/kalpakrusha/kalpakrusha.png
+    - assets/images/profile_image.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

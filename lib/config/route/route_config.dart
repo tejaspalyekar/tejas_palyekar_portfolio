@@ -32,4 +32,12 @@ final router = GoRouter(
       },
     ),
   ],
+  errorBuilder: (context, state) => Scaffold(
+    body: Center(
+      child: Text(
+        'Page not found',
+        style: Theme.of(context).textTheme.headlineMedium,
+      ),
+    ),
+  ),
 );

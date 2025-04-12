@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "238074124383",
+    "project_id": "tejas-portfolio-f3f67",
+    "storage_bucket": "tejas-portfolio-f3f67.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238074124383:android:854e835fb1c27001aa23ea",
+        "android_client_info": {
+          "package_name": "com.tejas.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeFTan9BrhI5NjWAd66YgwILuOBWZGvZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

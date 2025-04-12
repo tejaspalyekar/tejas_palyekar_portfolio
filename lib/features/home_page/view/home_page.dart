@@ -11,6 +11,7 @@ import 'package:tejas_palyekar_portfolio/utils/components/get_in_touch.dart';
 import 'package:tejas_palyekar_portfolio/utils/components/experience_section.dart';
 import 'package:tejas_palyekar_portfolio/utils/components/hero_section.dart';
 import 'package:tejas_palyekar_portfolio/utils/components/opensource_section.dart';
+import 'package:tejas_palyekar_portfolio/utils/components/professional_summary_section.dart';
 import 'package:tejas_palyekar_portfolio/utils/components/project_section.dart';
 import 'package:tejas_palyekar_portfolio/utils/components/skills_section.dart';
 import 'package:go_router/go_router.dart';
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<HomePageViewModel>( 
+    return Consumer<HomePageViewModel>(
       builder: (context, homePageViewModel, child) => Scaffold(
         appBar: AppBar(
           title: const Text('Tejas Palyekar'),
@@ -37,30 +38,44 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              HeroSection(),
-              const SizedBox(height: 40),
-              const SkillsSection(),
-              const SizedBox(height: 40),
-              const ProjectsSection(),
-              const SizedBox(height: 40),
-              ExperienceSection(),
-              const SizedBox(height: 40),
-              const CertificatesSection(),
-              const SizedBox(height: 40),
-              const AchievementsSection(),
-              const SizedBox(height: 40),
-              const OpenSourceSection(),
-              const SizedBox(height: 40),
-              GetInTouchSection(
-                isDarkMode: homePageViewModel.appTheme,
+        body: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: constraints.maxHeight,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HeroSection(),
+                    const SizedBox(height: 40),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 24.0),
+                      child: ProfessionalSummarySection(),
+                    ),
+                    const SizedBox(height: 40),
+                    const SkillsSection(),
+                    const SizedBox(height: 40),
+                    const ProjectsSection(),
+                    const SizedBox(height: 40),
+                    ExperienceSection(),
+                    const SizedBox(height: 40),
+                    const CertificatesSection(),
+                    const SizedBox(height: 40),
+                    const AchievementsSection(),
+                    const SizedBox(height: 40),
+                    const OpenSourceSection(),
+                    const SizedBox(height: 40),
+                    GetInTouchSection(
+                      isDarkMode: homePageViewModel.appTheme,
+                    ),
+                    _footer(),
+                  ],
+                ),
               ),
-              _footer(),
-            ],
-          ),
+            );
+          },
         ),
         floatingActionButton: IconButton(
           tooltip: "Send Message",
@@ -76,11 +91,13 @@ class HomePage extends StatelessWidget {
   }
 }
 
-_footer() {
+Widget _footer() {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
     alignment: Alignment.bottomRight,
-    child: Text("© 2024 Tejas Palyekar. All rights reserved.",
-        style: GoogleFonts.poppins(fontSize: 14, color: Colors.grey)),
+    child: Text(
+      "© 2025 Tejas Palyekar. All rights reserved.",
+      style: GoogleFonts.poppins(fontSize: 14, color: Colors.grey),
+    ),
   );
 }

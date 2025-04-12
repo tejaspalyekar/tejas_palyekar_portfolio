@@ -87,10 +87,10 @@ class _HeroSectionState extends State<HeroSection>
           bool isDesktop = constraints.maxWidth >= tabSize;
 
           double imageSize = isMobile
-              ? constraints.maxWidth * 0.5
+              ? constraints.maxWidth * 0.4
               : isTab
-                  ? constraints.maxWidth * 0.4
-                  : constraints.maxWidth * 0.28;
+                  ? constraints.maxWidth * 0.3
+                  : constraints.maxWidth * 0.2;
 
           double titleFontSize = isMobile
               ? 32
@@ -150,24 +150,24 @@ class _HeroSectionState extends State<HeroSection>
                         children: [
                           ScaleTransition(
                             scale: _imageAnimation,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.3),
-                                    blurRadius: 20,
-                                    spreadRadius: 2,
+                            child: AspectRatio(
+                              aspectRatio: 1,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.3),
+                                      blurRadius: 20,
+                                      spreadRadius: 2,
+                                    ),
+                                  ],
+                                ),
+                                child: ClipOval(
+                                  child: Image.asset(
+                                    profileImage,
+                                    fit: BoxFit.cover,
                                   ),
-                                ],
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(imageSize),
-                                child: Image.asset(
-                                  profileImage,
-                                  width: imageSize,
-                                  height: imageSize,
-                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -204,7 +204,7 @@ class _HeroSectionState extends State<HeroSection>
                           ),
                           const SizedBox(height: 35),
                           Text(
-                            'A passionate Mobile App Developer specializing in Flutter, React Native, and Android. With a focus on delivering high-quality, user-centric apps, I prioritize clean code, performance optimization, and seamless deployment.',
+                            'A passionate Flutter expert and Mobile App Developer with a proven track record of building exceptional applications. Leveraging deep expertise in Flutter and experience with React Native and Android, I deliver high-performance, user-centric solutions with clean architecture and seamless deployment.',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.poppins(
                               fontSize: bodyFontSize,
@@ -252,7 +252,7 @@ class _HeroSectionState extends State<HeroSection>
                                 ),
                                 const SizedBox(height: 35),
                                 Text(
-                                  'A passionate Mobile App Developer specializing in Flutter, React Native, and Android. With a focus on delivering high-quality, user-centric apps, I prioritize clean code, performance optimization, and seamless deployment.',
+                                  'A passionate Flutter expert and Mobile App Developer with a proven track record of building exceptional applications. Leveraging deep expertise in Flutter and experience with React Native and Android, I deliver high-performance, user-centric solutions with clean architecture and seamless deployment.',
                                   style: GoogleFonts.poppins(
                                     fontSize: bodyFontSize,
                                     color: homeViewModel.appTheme
@@ -291,25 +291,24 @@ class _HeroSectionState extends State<HeroSection>
                             flex: 3,
                             child: ScaleTransition(
                               scale: _imageAnimation,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.3),
-                                      blurRadius: 20,
-                                      spreadRadius: 2,
+                              child: AspectRatio(
+                                aspectRatio: 1,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.3),
+                                        blurRadius: 20,
+                                        spreadRadius: 2,
+                                      ),
+                                    ],
+                                  ),
+                                  child: ClipOval(
+                                    child: Image.asset(
+                                      profileImage,
+                                      fit: BoxFit.cover,
                                     ),
-                                  ],
-                                ),
-                                child: ClipRRect(
-                                  borderRadius:
-                                      BorderRadius.circular(imageSize),
-                                  child: Image.asset(
-                                    profileImage,
-                                    width: imageSize,
-                                    height: imageSize,
-                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
@@ -333,12 +332,6 @@ class _HeroSectionState extends State<HeroSection>
                       tooltip: 'GitHub',
                       color:
                           homeViewModel.appTheme ? Colors.white : Colors.black,
-                    ),
-                    const SizedBox(width: 16),
-                    _buildSocialButton(
-                      icon: instagramIcon,
-                      onPressed: () => homeViewModel.openInstagram(),
-                      tooltip: 'Instagram',
                     ),
                     const SizedBox(width: 16),
                     _buildSocialButton(

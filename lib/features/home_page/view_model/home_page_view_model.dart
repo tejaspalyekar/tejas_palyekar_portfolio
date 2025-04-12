@@ -15,141 +15,219 @@ class HomePageViewModel extends ChangeNotifier {
   // Projects list ordered by impact and downloads
   List<Project> _projects = [
     Project(
-      title: "Parachute Kalpavriksha",
+      title: "Kalpavriksha",
       description:
-          "App for farmers with 100K+ installs and 4.8 rating. Helps farmers manage crops, track expenses, and connect with experts.",
-      imageUrl: "assets/images/profile_image.jpeg",
-      technologies: ["Flutter", "Firebase Crashlytics", "Google Analytics"],
-      playStoreUrl:
-          "https://play.google.com/store/apps/details?id=com.marico.kalpavriksha",
-      featured: true,
-      screenshots: [
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
-      ],
-      longDescription:
-          "Parachute Kalpavriksha is a farmer engagement app that helps bridge the gap between farmers and agricultural experts. It offers features like crop management, expense tracking, expert consultations, and knowledge sharing. The app has been highly successful with over 100,000 installs and a 4.8-star rating on the Play Store.",
-      keyHighlights: [
-        "SSL Pinning",
-        "Firebase Crashlytics",
-        "In-App Notifications",
+          "India's #1 app for Coconut Farmers with 100K+ downloads. Features include real-time COPRA pricing, expert helpline, multilingual support, and market connectivity.",
+      technologies: [
+        "Flutter",
+        "Firebase",
         "Multilingual Support",
-        "Offline Functionality"
+        "Real-time Updates",
+        "Market Integration"
       ],
-    ),
-    Project(
-      title: "Food Fitness",
-      description:
-          "Healthcare app with appointment booking and e-commerce features. Connects users with nutritionists and fitness trainers.",
-      imageUrl: "assets/images/profile_image.jpeg",
-      technologies: ["Flutter", "Jitsi SDK", "WebRTC", "Payment Integration"],
       playStoreUrl:
-          "https://play.google.com/store/apps/details?id=com.foodfitness.app",
+          "https://play.google.com/store/apps/details?id=com.pkf.kalpavriksha",
+      appStoreUrl: "https://apps.apple.com/in/app/kalpavriksha/id6472012000",
       featured: true,
-      screenshots: [
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
-      ],
       longDescription:
-          "Food Fitness is a comprehensive healthcare application that focuses on nutrition and fitness. Users can book appointments with nutritionists and fitness trainers, participate in live sessions using Jitsi SDK, purchase health products, and track their progress. The app includes both patient and doctor interfaces.",
+          "Kalpavriksha is India's leading app for Coconut Farmers, designed to help manage products effectively and increase productivity through industry best practices. The app provides daily COPRA pricing updates and real-time expert consultation via helpline (1800264646). It serves as a platform connecting farmers and traders for price discovery and trading of coconuts and related products. The app features market prices, multilingual support (Tamil & English), and is specifically designed for Indian coconut farmers, completely free of cost.",
       keyHighlights: [
-        "Live Video Consultations",
-        "PayU Payment Integration",
-        "E-commerce Features",
-        "Appointment Scheduling",
-        "Health Tracking"
+        "100K+ Downloads",
+        "Real-time COPRA Pricing Updates",
+        "Expert Helpline Support",
+        "Farmer-Trader Marketplace",
+        "Multilingual Support (Tamil & English)",
+        "Daily Price Notifications",
+        "Free to Use"
       ],
     ),
     Project(
       title: "Aatmaya Farms",
       description:
-          "E-commerce app for organic products with delivery tracking and payment integration. Available on both Play Store and App Store.",
-      imageUrl: "assets/images/profile_image.jpeg",
-      technologies: ["Flutter", "Firebase", "Google Maps", "Payment Gateway"],
-      playStoreUrl:
-          "https://play.google.com/store/apps/details?id=com.aatmayafarms.customer",
-      appStoreUrl: "https://apps.apple.com/app/aatmaya-farms/id123456789",
-      featured: true,
-      screenshots: [
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
+          "E-commerce app connecting urban consumers to organic farm products. Features real-time inventory, Google Maps integration, in-app wallet, subscriptions, and multi-language support.",
+      technologies: [
+        "Flutter",
+        "Firebase",
+        "Google Maps",
+        "Payment Gateway",
+        "Fastlane"
       ],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.milkeshav.aatmaya",
+      appStoreUrl: "https://apps.apple.com/in/app/aatmaya-farms/id6532603037",
+      featured: true,
       longDescription:
-          "Aatmaya Farms is an e-commerce platform for organic products, featuring customer and delivery partner apps. The customer app allows users to browse products, place orders, track delivery, and make payments. The delivery partner app helps with efficient route planning and order management.",
+          "Aatmaya Farms is an e-commerce platform that connects urban consumers directly to organic farm products. The app features real-time inventory management, Google Maps integration for delivery tracking, in-app wallet for seamless payments, subscription services for regular deliveries, and multi-language support (English, Hindi). The project includes both customer and delivery partner apps with Fastlane integration for automated deployment.",
       keyHighlights: [
         "Google Maps Integration",
         "Easebuzz Payment Gateway",
         "Real-time Delivery Tracking",
         "Order Management",
+        "CI/CD with Fastlane",
+        "500+ Downloads",
+        "4.9 Rating"
+      ],
+    ),
+    Project(
+      title: "Aatmaya Farms Delivery Partner",
+      description:
+          "Built for delivery agents & distributors. Features include delivery scheduling, real-time updates, role-based login, delivery order rearrangement, and performance tracking.",
+      technologies: ["Flutter", "Firebase", "Fastlane"],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.milkeshav.aatmayafarms_delivery",
+      featured: true,
+      longDescription:
+          "The Aatmaya Farms Delivery Partner app is designed for delivery agents and distributors. It includes features like delivery scheduling, real-time order updates, role-based login, the ability to rearrange delivery orders, and performance tracking. The app is integrated with Fastlane for automated deployment and testing.",
+      keyHighlights: [
+        "Delivery Scheduling",
+        "Real-time Updates",
+        "Route Optimization",
+        "Performance Tracking",
         "CI/CD with Fastlane"
       ],
     ),
     Project(
-      title: "Caparol App",
+      title: "Food Fitness Doctor App",
       description:
-          "App for painters to redeem points via QR scanning and invoice upload. Incentivizes painters to use Caparol products.",
-      imageUrl: "assets/images/profile_image.jpeg",
-      technologies: ["Flutter", "QR Scanner", "API Integration"],
+          "Healthcare platform for doctors. Features include live/clinic appointments, PayU payments, Jitsi SDK, WebRTC, and e-commerce features.",
+      technologies: ["Flutter", "Jitsi SDK", "WebRTC", "PayU", "Firebase"],
       playStoreUrl:
-          "https://play.google.com/store/apps/details?id=com.caparol.app",
-      screenshots: [
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
-      ],
+          "https://play.google.com/store/apps/details?id=com.foodFitness.doctor",
+      featured: true,
       longDescription:
-          "The Caparol App is designed for painters to earn and redeem points by scanning QR codes on Caparol products and uploading invoices. It features a user-friendly interface, QR scanning capabilities, invoice upload functionality, and a rewards catalog for point redemption.",
+          "Food Fitness Doctor App is a comprehensive healthcare platform for medical professionals. The platform enables live and clinic appointments, integrates PayU for secure payments, uses Jitsi SDK for video consultations, and includes e-commerce features for health products.",
       keyHighlights: [
-        "QR Code Scanning",
-        "Invoice Upload & Verification",
-        "Points System",
-        "Rewards Catalog",
-        "User Management"
+        "Live Video Consultations",
+        "Appointment Scheduling",
+        "Secure Payments",
+        "E-commerce Integration",
+        "Real-time Chat"
+      ],
+    ),
+    Project(
+      title: "Food Fitness",
+      description:
+          "Patient-facing app for booking appointments, video consultations, and purchasing health products.",
+      technologies: ["Flutter", "Jitsi SDK", "PayU", "Firebase"],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.food_fitness.patient",
+      featured: true,
+      longDescription:
+          "Food Fitness is a patient-facing application that allows users to book appointments with doctors, attend video consultations, purchase health products, and track their health journey. The app features a user-friendly interface and secure payment integration.",
+      keyHighlights: [
+        "Appointment Booking",
+        "Video Consultations",
+        "Health Product Store",
+        "Health Tracking",
+        "Secure Payments"
       ],
     ),
     Project(
       title: "App Locker",
       description:
-          "Custom app locker with PIN-based access and security features. Helps users protect their privacy by securing apps.",
-      imageUrl: "assets/images/profile_image.jpeg",
-      technologies: ["Flutter", "Local Storage", "System Integration"],
-      githubUrl: "https://github.com/TejasPalyekar/app-locker",
-      screenshots: [
-        "assets/images/profile_image.jpeg",
-        "assets/images/profile_image.jpeg",
+          "Custom app locker with PIN-based access, hide app from launcher, clear app data & uninstall app on incorrect PIN, hide notifications of hidden apps, and custom launcher experience.",
+      technologies: [
+        "Flutter",
+        "Android Native",
+        "Security",
+        "Custom Launcher"
       ],
+      featured: true,
       longDescription:
-          "App Locker is a security application that allows users to protect their privacy by locking access to specific apps with a PIN. It includes features like hiding apps from the launcher, clearing app data on incorrect PIN attempts, and a custom launcher experience.",
+          "A custom app locker application with advanced security features. The app allows users to protect their applications with a PIN, hide apps from the launcher, automatically clear app data and uninstall on incorrect PIN attempts, hide notifications from protected apps, and provides a custom launcher experience.",
       keyHighlights: [
-        "PIN Protection",
+        "PIN-based Access",
         "App Hiding",
-        "Security Measures",
-        "Custom Launcher",
-        "Notification Management"
+        "Auto Data Clear",
+        "Notification Control",
+        "Custom Launcher"
       ],
     ),
     Project(
       title: "Release to Trigger",
       description:
-          "Published Flutter package to detect release gestures. Available on pub.dev with comprehensive documentation.",
-      imageUrl: "assets/images/profile_image.jpeg",
-      technologies: ["Flutter", "Dart", "Package Development"],
-      githubUrl: "https://github.com/TejasPalyekar/release_to_trigger",
-      pubDevUrl: "https://pub.dev/packages/release_to_trigger",
-      screenshots: [
-        "assets/images/profile_image.jpeg",
+          "Cross-platform Flutter package for capturing vertical swipes and triggering actions. Supports Android, iOS, Web, and Desktop platforms. Perfect for pull-to-refresh, swipe-to-access, and custom interactive UIs.",
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Cross-Platform",
+        "Gesture Detection",
+        "UI Components"
       ],
+      featured: true,
+      playStoreUrl: "https://pub.dev/packages/release_to_trigger",
       longDescription:
-          "Release to Trigger is a Flutter package published on pub.dev that enables developers to detect when a user releases a gesture (like tapping or dragging). It provides customizable callbacks for release events, making it useful for creating intuitive user interactions and games.",
+          "A cross-platform Flutter package published on pub.dev for capturing vertical swipes and triggering custom actions. The package supports Android, iOS, Web, and Desktop platforms, making it versatile for various applications. Perfect for implementing pull-to-refresh functionality, swipe-to-access features, and creating custom interactive user interfaces across all supported platforms.",
       keyHighlights: [
-        "Custom Gesture Detection",
-        "Flexible Configuration",
-        "Comprehensive Documentation",
-        "Example App",
-        "MIT License"
+        "Cross-Platform Support",
+        "Vertical Swipe Detection",
+        "Custom Action Triggers",
+        "Pull-to-refresh",
+        "Swipe-to-access",
+        "Interactive UI",
+        "Platform Agnostic"
       ],
+    ),
+    Project(
+      title: "Harrj",
+      description:
+          "Online auction app supporting both regular and live bidding via Zoom. Features include bid history, seller/buyer feedback, and multi-language support (English, Arabic).",
+      technologies: ["React Native", "Zoom SDK", "Firebase", "Multi-language"],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.harrj.app",
+      appStoreUrl: "https://apps.apple.com/in/app/harrj/id1234567890",
+      featured: false,
+      longDescription:
+          "Harrj is an online auction platform that supports both regular bidding and live bidding via Zoom integration. The app features comprehensive bid history tracking, seller/buyer feedback systems, and multi-language support for English and Arabic users.",
+      keyHighlights: [
+        "Live Auction Integration",
+        "Bid History Tracking",
+        "Multi-language Support",
+        "User Feedback System",
+        "Real-time Updates"
+      ],
+    ),
+    Project(
+      title: "Probott SFA",
+      description:
+          "Sales Force Automation tool supporting real-time order processing, CRM, store visits, offline access, and sales tracking.",
+      technologies: ["Flutter", "Firebase", "Offline Storage", "CRM"],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.probott.sfa",
+      featured: false,
+      longDescription:
+          "Probott SFA is a comprehensive Sales Force Automation tool designed for field sales teams. It supports real-time order processing, customer relationship management, store visit tracking, offline data access, and comprehensive sales analytics.",
+      keyHighlights: [
+        "Real-time Order Processing",
+        "CRM Integration",
+        "Offline Functionality",
+        "Store Visit Tracking",
+        "Sales Analytics"
+      ],
+    ),
+    Project(
+      title: "N2C",
+      description:
+          "Native Android app for N2C Copra with bug fixes, improvements, and deployment.",
+      technologies: ["Java", "Android SDK", "Firebase"],
+      featured: false,
+      longDescription:
+          "N2C is a native Android application developed in Java. The project involved implementing bug fixes, performance improvements, and managing the deployment process.",
+      keyHighlights: [
+        "Native Android Development",
+        "Performance Optimization",
+        "Bug Fixes",
+        "Deployment Management"
+      ],
+    ),
+    Project(
+      title: "Enertia",
+      description: "Flutter app currently in development.",
+      technologies: ["Flutter", "Firebase"],
+      featured: false,
+      longDescription:
+          "Enertia is a Flutter application currently under development. More details will be available upon completion.",
+      keyHighlights: ["In Development", "Flutter", "Firebase Integration"],
     ),
   ];
 
@@ -232,6 +310,7 @@ class HomePageViewModel extends ChangeNotifier {
   final Map<String, List<String>> _skills = {
     "Mobile Development": [
       "Flutter",
+      "React Native",
       "Dart",
       "UI/UX Design",
       "Firebase",
@@ -247,20 +326,33 @@ class HomePageViewModel extends ChangeNotifier {
       "Fastlane",
       "Android Studio",
       "VS Code",
-      "Jira"
+      "Jira",
+      "Google Maps",
+      "Zoom SDK",
+      "Jitsi SDK"
     ],
-    "Security": [
+    "Security & Payments": [
       "Mobile App Security",
       "SSL Pinning",
       "Secure Storage",
-      "Authentication"
+      "Authentication",
+      "PayU Integration",
+      "Easebuzz Integration"
+    ],
+    "Deployment & Distribution": [
+      "Play Store Deployment",
+      "App Store Deployment",
+      "Fastlane Automation",
+      "CI/CD Pipeline",
+      "App Signing"
     ]
   };
 
   // Getters
   List<Project> get projects => _projects;
   List<Project> get featuredProjects =>
-      _projects.where((project) => project.featured).toList();
+      _projects.where((p) => p.featured).toList();
+  List<Project> get initialProjects => _projects.take(6).toList();
   List<Certificate> get certificates => _certificates;
   List<Achievement> get achievements => _achievements;
   List<OpenSourceContribution> get openSourceContributions =>

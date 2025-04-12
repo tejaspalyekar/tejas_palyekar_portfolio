@@ -12,18 +12,34 @@ class SkillsSection extends StatelessWidget {
     final skills = viewModel.skills;
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
-    return Padding(
-      padding: const EdgeInsets.all(24.0),
+    return Container(
+      padding: const EdgeInsets.all(32.0),
+      decoration: BoxDecoration(
+        color: isDarkMode
+            ? Colors.blue.withOpacity(0.05)
+            : Colors.blue.withOpacity(0.02),
+        borderRadius: BorderRadius.circular(24),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Skills",
-            style: GoogleFonts.poppins(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).textTheme.bodyLarge?.color,
-            ),
+          Row(
+            children: [
+              Icon(
+                Icons.code,
+                size: 32,
+                color: Theme.of(context).primaryColor,
+              ),
+              const SizedBox(width: 16),
+              Text(
+                "Skills",
+                style: GoogleFonts.poppins(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).textTheme.bodyLarge?.color,
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 8),
           Text(
@@ -33,7 +49,7 @@ class SkillsSection extends StatelessWidget {
               color: Theme.of(context).textTheme.bodyMedium?.color,
             ),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 32),
           ...skills.entries.map((entry) => _buildSkillCategory(
                 context,
                 category: entry.key,
@@ -52,45 +68,112 @@ class SkillsSection extends StatelessWidget {
     required bool isDarkMode,
   }) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 24.0),
+      padding: const EdgeInsets.only(bottom: 32.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: const EdgeInsets.only(bottom: 12.0),
-            child: Text(
-              category,
-              style: GoogleFonts.poppins(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                color: Theme.of(context).textTheme.titleLarge?.color,
-              ),
+            margin: const EdgeInsets.only(bottom: 16.0),
+            child: Row(
+              children: [
+                Container(
+                  width: 4,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Text(
+                  category,
+                  style: GoogleFonts.poppins(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w600,
+                    color: Theme.of(context).textTheme.titleLarge?.color,
+                  ),
+                ),
+              ],
             ),
           ),
           Wrap(
             spacing: 12,
             runSpacing: 12,
             children: skillsList.map((skill) {
-              return Chip(
-                label: Text(
-                  skill,
-                  style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    color: isDarkMode ? Colors.white : Colors.black87,
-                  ),
-                ),
-                backgroundColor: isDarkMode
-                    ? Colors.blue.withOpacity(0.2)
-                    : Colors.blue.withOpacity(0.1),
-                side: BorderSide(
-                  color: isDarkMode ? Colors.blue[700]! : Colors.blue[300]!,
-                  width: 1,
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              return _HoverableSkillChip(
+                skill: skill,
+                isDarkMode: isDarkMode,
               );
             }).toList(),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _HoverableSkillChip extends StatefulWidget {
+  final String skill;
+  final bool isDarkMode;
+
+  const _HoverableSkillChip({
+    required this.skill,
+    required this.isDarkMode,
+  });
+
+  @override
+  State<_HoverableSkillChip> createState() => _HoverableSkillChipState();
+}
+
+class _HoverableSkillChipState extends State<_HoverableSkillChip> {
+  bool isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) => setState(() => isHovered = true),
+      onExit: (_) => setState(() => isHovered = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: BoxDecoration(
+          color: isHovered
+              ? (widget.isDarkMode ? Colors.blue[900] : Colors.blue[50])
+              : (widget.isDarkMode
+                  ? Colors.blue.withOpacity(0.1)
+                  : Colors.blue.withOpacity(0.05)),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+            color: isHovered
+                ? Theme.of(context).primaryColor
+                : (widget.isDarkMode ? Colors.blue[700]! : Colors.blue[200]!),
+            width: 1.5,
+          ),
+          boxShadow: isHovered
+              ? [
+                  BoxShadow(
+                    color: Theme.of(context).primaryColor.withOpacity(0.2),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  )
+                ]
+              : [],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              widget.skill,
+              style: GoogleFonts.poppins(
+                fontSize: 14,
+                fontWeight: isHovered ? FontWeight.w600 : FontWeight.w500,
+                color: isHovered
+                    ? Theme.of(context).primaryColor
+                    : (widget.isDarkMode ? Colors.white : Colors.black87),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

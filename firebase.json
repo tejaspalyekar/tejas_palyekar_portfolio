@@ -1,0 +1,34 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "tejas-portfolio-f3f67",
+          "appId": "1:238074124383:android:854e835fb1c27001aa23ea",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "tejas-portfolio-f3f67",
+          "configurations": {
+            "android": "1:238074124383:android:854e835fb1c27001aa23ea",
+            "ios": "1:238074124383:ios:1869aba2ea3a738faa23ea",
+            "web": "1:238074124383:web:6dcae3096420f2e4aa23ea"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "asia-east1"
+    }
+  }
+}

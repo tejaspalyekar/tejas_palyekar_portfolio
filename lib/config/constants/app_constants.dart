@@ -1,5 +1,5 @@
 const cvUrl =
-    "https://drive.google.com/file/d/1WwcKGXd51JqwRP_6lB46lB4pbc9TAtMH/view?usp=sharing";
+    "https://drive.google.com/file/d/1iEWXEdU6v1-JxS9EE4bm_kCizWA_huz7/view?usp=drive_link";
 
 const whatsAppUrl = "https://wa.me/918879340589?text=Hello, Tejas Palyekar";
 
