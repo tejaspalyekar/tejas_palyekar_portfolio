@@ -187,36 +187,24 @@ class _ProjectsSectionState extends State<ProjectsSection> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(12),
-                topRight: Radius.circular(12),
-              ),
-              child: project.title == "Kalpavriksha"
-                  ? SizedBox(
-                      height: isMobile ? 160 : 220,
-                      child: PageView.builder(
-                        itemCount: 3,
-                        controller: PageController(viewportFraction: 1.0),
-                        itemBuilder: (context, index) {
-                          return Image.asset(
-                            'assets/images/kalpakrusha/kalpakrusha.png',
-                            width: double.infinity,
-                            fit: BoxFit.cover,
-                          );
-                        },
-                      ),
-                    )
-                  : Container(
-                      width: double.infinity,
-                      height: isMobile ? 160 : 220,
-                      color: isDarkMode ? Colors.grey[800] : Colors.grey[200],
-                      child: Icon(
-                        Icons.image,
-                        size: isMobile ? 40 : 50,
-                        color: isDarkMode ? Colors.grey[600] : Colors.grey[400],
-                      ),
-                    ),
-            ),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                ),
+                child: SizedBox(
+                  height: isMobile ? 160 : 220,
+                  child: PageView.builder(
+                    itemCount: 3,
+                    controller: PageController(viewportFraction: 1.0),
+                    itemBuilder: (context, index) {
+                      return Image.asset(
+                        project.imagePath,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      );
+                    },
+                  ),
+                )),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -276,7 +264,7 @@ class _ProjectsSectionState extends State<ProjectsSection> {
                     Wrap(
                       spacing: 6,
                       runSpacing: 6,
-                      children: project.technologies.map((tech) {
+                      children: project.technologies.sublist(0, 3).map((tech) {
                         return Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 8, vertical: 4),

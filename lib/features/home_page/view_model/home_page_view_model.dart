@@ -7,50 +7,58 @@ import 'package:url_launcher/url_launcher.dart';
 class HomePageViewModel extends ChangeNotifier {
   bool _isDarkTheme = true;
   bool cvLoading = false;
-  bool _whatsappLoading = false;
+  final bool _whatsappLoading = false;
   bool get appTheme => _isDarkTheme;
   bool get downloadLoading => cvLoading;
   bool get openWhatsAppLoading => _whatsappLoading;
 
   // Projects list ordered by impact and downloads
-  List<Project> _projects = [
+  final List<Project> _projects = [
     Project(
       title: "Kalpavriksha",
       description:
-          "India's #1 app for Coconut Farmers with 100K+ downloads. Features include real-time COPRA pricing, expert helpline, multilingual support, and market connectivity.",
+          "India's #1 app for Coconut Farmers with 100K+ downloads. Features include real-time COPRA pricing, Google & Apple login support, multilingual support, farmer & trader role, weather updates, government scheme, fertilizer calculator, Ask an expert and many more features",
       technologies: [
-        "Flutter",
-        "Firebase",
-        "Multilingual Support",
-        "Real-time Updates",
-        "Market Integration"
+        "Flutter (Cross-platform for Android & iOS)",
+        "FCM Notifications",
+        "Google Analytics",
+        'Google Crashlytics',
+        'Open Weather Api Integration',
+        "CI/CD",
+        "Appium for Automation testing"
+            "Google & Apple Login",
+        "MVC Architecture"
       ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.pkf.kalpavriksha",
       appStoreUrl: "https://apps.apple.com/in/app/kalpavriksha/id6472012000",
       featured: true,
       longDescription:
-          "Kalpavriksha is India's leading app for Coconut Farmers, designed to help manage products effectively and increase productivity through industry best practices. The app provides daily COPRA pricing updates and real-time expert consultation via helpline (1800264646). It serves as a platform connecting farmers and traders for price discovery and trading of coconuts and related products. The app features market prices, multilingual support (Tamil & English), and is specifically designed for Indian coconut farmers, completely free of cost.",
+          "India's #1 app for Coconut Farmers with 100K+ downloads. Features include real-time COPRA pricing, Google & Apple login support, multilingual support, farmer & trader role, weather updates, government scheme, fertilizer calculator, Ask an expert and many more features. Kalpavriksha is designed to help manage farmer products(coconut) effectively and increase productivity through industry best practices. The app provides daily COPRA pricing updates and real-time expert consultation via helpline (1800264646). It serves as a platform connecting farmers and traders for price discovery and trading of coconuts and related products. The app features market prices, multilingual support, and is specifically designed for Indian coconut farmers, completely free of cost.",
       keyHighlights: [
         "100K+ Downloads",
         "Real-time COPRA Pricing Updates",
-        "Expert Helpline Support",
+        "Ticket Support",
         "Farmer-Trader Marketplace",
-        "Multilingual Support (Tamil & English)",
+        "Multilingual Support",
         "Daily Price Notifications",
-        "Free to Use"
+        "Modular & Scalable Codebase",
+        " Beautiful UI with Best-in-Class UX",
+        "Easy Login",
       ],
+      imagePath: 'assets/images/kalpakrusha/mock_up_pkf.png',
     ),
     Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
       title: "Aatmaya Farms",
       description:
           "E-commerce app connecting urban consumers to organic farm products. Features real-time inventory, Google Maps integration, in-app wallet, subscriptions, and multi-language support.",
       technologies: [
-        "Flutter",
+        "Flutter (Cross-platform for Android & iOS)",
         "Firebase",
         "Google Maps",
         "Payment Gateway",
-        "Fastlane"
+        "Fastlane Automation"
       ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.milkeshav.aatmaya",
@@ -65,14 +73,22 @@ class HomePageViewModel extends ChangeNotifier {
         "Order Management",
         "CI/CD with Fastlane",
         "500+ Downloads",
-        "4.9 Rating"
+        "4.9 Rating",
+        "Modular & Scalable Codebase",
+        " Beautiful UI with Best-in-Class UX",
       ],
     ),
     Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
       title: "Aatmaya Farms Delivery Partner",
       description:
           "Built for delivery agents & distributors. Features include delivery scheduling, real-time updates, role-based login, delivery order rearrangement, and performance tracking.",
-      technologies: ["Flutter", "Firebase", "Fastlane"],
+      technologies: [
+        "Flutter(Android)",
+        "Getx for State Management"
+            "Firebase Notifications",
+        "Fastlane Automation"
+      ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.milkeshav.aatmayafarms_delivery",
       featured: true,
@@ -87,10 +103,17 @@ class HomePageViewModel extends ChangeNotifier {
       ],
     ),
     Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
       title: "Food Fitness Doctor App",
       description:
           "Healthcare platform for doctors. Features include live/clinic appointments, PayU payments, Jitsi SDK, WebRTC, and e-commerce features.",
-      technologies: ["Flutter", "Jitsi SDK", "WebRTC", "PayU", "Firebase"],
+      technologies: [
+        "Flutter (Cross-platform for Android & iOS)",
+        "Jitsi SDK",
+        "WebRTC",
+        "PayU",
+        "Firebase"
+      ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.foodFitness.doctor",
       featured: true,
@@ -105,10 +128,16 @@ class HomePageViewModel extends ChangeNotifier {
       ],
     ),
     Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
       title: "Food Fitness",
       description:
           "Patient-facing app for booking appointments, video consultations, and purchasing health products.",
-      technologies: ["Flutter", "Jitsi SDK", "PayU", "Firebase"],
+      technologies: [
+        "Flutter (Cross-platform for Android & iOS)",
+        "Jitsi SDK",
+        "PayU",
+        "Firebase"
+      ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.food_fitness.patient",
       featured: true,
@@ -123,14 +152,44 @@ class HomePageViewModel extends ChangeNotifier {
       ],
     ),
     Project(
+      imagePath: 'assets/images/caparol/caparol.png',
+      title: "Caparol Club",
+      description:
+          "A multilingual, earn-and-redeem mobile rewards application built for Caparol, a leading German paint company. The app enables painters to scan product QR codes and upload invoices to earn reward points that can be redeemed via bank transfer or gift coupons.",
+      technologies: [
+        "Flutter (Cross-platform for Android & iOS)",
+        "MVVM Architecture",
+        "Firebase (Google Analytics, Cloud Messaging, In-App Messaging)",
+        "English & Arabic with RTL/LTR layout handling",
+        "Dio for REST APIs Integration",
+        "Provider for state management"
+      ],
+      featured: false,
+      longDescription:
+          "Caparol Club is a reward-based mobile application designed for Caparol, one of Germany's top paint manufacturers. Tailored specifically for professional painters, the app allows users to accumulate points by scanning QR codes on paint cans and uploading purchase invoices. These points are credited to their in-app wallet and can be redeemed directly into their bank accounts or used to purchase exclusive coupons and offers. The app offers a seamless multilingual experience with support for both English (LTR) and Arabic (RTL), automatically adjusting alignment and layout based on the selected language. Firebase powers the real-time notification system and in-app messaging to keep users informed and engaged. The app was developed using the MVVM architecture, ensuring maintainability, scalability, and adherence to clean coding standards. With an intuitive user interface and user-focused experience, the app delivers excellent performance and usability across different regions",
+      keyHighlights: [
+        "QR Code Scanning",
+        "Multi-language Support",
+        "Push Notifications & In-App Messaging",
+        "Invoice Upload System",
+        "Reward Redemption",
+        "Modular & Scalable Codebase",
+        " Beautiful UI with Best-in-Class UX",
+        "Secure Authentication & Wallet System"
+      ],
+    ),
+    Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
       title: "App Locker",
       description:
           "Custom app locker with PIN-based access, hide app from launcher, clear app data & uninstall app on incorrect PIN, hide notifications of hidden apps, and custom launcher experience.",
       technologies: [
-        "Flutter",
+        "Flutter (Cross-platform for Android & iOS)",
         "Android Native",
         "Security",
-        "Custom Launcher"
+        "Custom Launcher",
+        "MVVM Architecture",
+        "Provider for State Management"
       ],
       featured: true,
       longDescription:
@@ -144,9 +203,11 @@ class HomePageViewModel extends ChangeNotifier {
       ],
     ),
     Project(
+      imagePath:
+          'assets/images/release_to_trigger/mock_up_release_to_trigger.png',
       title: "Release to Trigger",
       description:
-          "Cross-platform Flutter package for capturing vertical swipes and triggering actions. Supports Android, iOS, Web, and Desktop platforms. Perfect for pull-to-refresh, swipe-to-access, and custom interactive UIs.",
+          "release_to_trigger is a powerful Flutter widget designed to capture vertical and horizontal swipe gestures and trigger custom actions when users pull and release the swipe at a defined height.",
       technologies: [
         "Flutter",
         "Dart",
@@ -157,18 +218,61 @@ class HomePageViewModel extends ChangeNotifier {
       featured: true,
       playStoreUrl: "https://pub.dev/packages/release_to_trigger",
       longDescription:
-          "A cross-platform Flutter package published on pub.dev for capturing vertical swipes and triggering custom actions. The package supports Android, iOS, Web, and Desktop platforms, making it versatile for various applications. Perfect for implementing pull-to-refresh functionality, swipe-to-access features, and creating custom interactive user interfaces across all supported platforms.",
+          "release_to_trigger is a powerful Flutter widget designed to capture vertical and horizontal swipe gestures and trigger custom actions when users pull and release the swipe at a defined height. With support for both top and bottom swipe gestures, it's perfect for building interactive UIs, pull-to-refresh controls, or custom trigger actions like loading new content or activating specific app features.",
       keyHighlights: [
         "Cross-Platform Support",
         "Vertical Swipe Detection",
         "Custom Action Triggers",
         "Pull-to-refresh",
-        "Swipe-to-access",
-        "Interactive UI",
-        "Platform Agnostic"
+        "Haptic Feedback",
+        "Customizable Appearance",
+        "Spring Animations"
       ],
     ),
     Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
+      title: "Probott SFA",
+      description:
+          "Sales Force Automation tool supporting real-time order processing, CRM, store visits, offline access, and sales tracking.",
+      technologies: [
+        "Flutter",
+        "Bloc Architecture",
+        "Bloc State management",
+        "Dio for api integration"
+            "Firebase Notifications",
+        "Offline First",
+      ],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.probott.sfa",
+      featured: false,
+      longDescription:
+          "Probott SFA is a comprehensive Sales Force Automation tool designed for field sales teams. It supports real-time order processing, customer relationship management, store visit tracking, offline data access, and comprehensive sales analytics.",
+      keyHighlights: [
+        "Real-time Order Processing",
+        "CRM Integration",
+        "Offline Functionality",
+        "Store Visit Tracking",
+        "Sales Analytics"
+      ],
+    ),
+    Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
+      title: "N2C",
+      description:
+          "Native Android app for N2C Copra with bug fixes, improvements, and deployment.",
+      technologies: ["Java", "Android SDK", "Firebase"],
+      featured: false,
+      longDescription:
+          "N2C is a native Android application developed in Java. The project involved implementing bug fixes, performance improvements, and managing the deployment process.",
+      keyHighlights: [
+        "Native Android Development",
+        "Performance Optimization",
+        "Bug Fixes",
+        "Deployment Management"
+      ],
+    ),
+    Project(
+      imagePath: 'assets/images/Image-Placeholder.png',
       title: "Harrj",
       description:
           "Online auction app supporting both regular and live bidding via Zoom. Features include bid history, seller/buyer feedback, and multi-language support (English, Arabic).",
@@ -187,51 +291,9 @@ class HomePageViewModel extends ChangeNotifier {
         "Real-time Updates"
       ],
     ),
-    Project(
-      title: "Probott SFA",
-      description:
-          "Sales Force Automation tool supporting real-time order processing, CRM, store visits, offline access, and sales tracking.",
-      technologies: ["Flutter", "Firebase", "Offline Storage", "CRM"],
-      playStoreUrl:
-          "https://play.google.com/store/apps/details?id=com.probott.sfa",
-      featured: false,
-      longDescription:
-          "Probott SFA is a comprehensive Sales Force Automation tool designed for field sales teams. It supports real-time order processing, customer relationship management, store visit tracking, offline data access, and comprehensive sales analytics.",
-      keyHighlights: [
-        "Real-time Order Processing",
-        "CRM Integration",
-        "Offline Functionality",
-        "Store Visit Tracking",
-        "Sales Analytics"
-      ],
-    ),
-    Project(
-      title: "N2C",
-      description:
-          "Native Android app for N2C Copra with bug fixes, improvements, and deployment.",
-      technologies: ["Java", "Android SDK", "Firebase"],
-      featured: false,
-      longDescription:
-          "N2C is a native Android application developed in Java. The project involved implementing bug fixes, performance improvements, and managing the deployment process.",
-      keyHighlights: [
-        "Native Android Development",
-        "Performance Optimization",
-        "Bug Fixes",
-        "Deployment Management"
-      ],
-    ),
-    Project(
-      title: "Enertia",
-      description: "Flutter app currently in development.",
-      technologies: ["Flutter", "Firebase"],
-      featured: false,
-      longDescription:
-          "Enertia is a Flutter application currently under development. More details will be available upon completion.",
-      keyHighlights: ["In Development", "Flutter", "Firebase Integration"],
-    ),
   ];
 
-  List<Certificate> _certificates = [
+  final List<Certificate> _certificates = [
     Certificate(
       title: "The Complete Mobile Ethical Hacking Course",
       issuer: "Udemy",
@@ -264,7 +326,7 @@ class HomePageViewModel extends ChangeNotifier {
     ),
   ];
 
-  List<Achievement> _achievements = [
+  final List<Achievement> _achievements = [
     Achievement(
       title: "1st Place in Projectathon 2.0",
       organization: "National Level Project Competition",
@@ -295,7 +357,7 @@ class HomePageViewModel extends ChangeNotifier {
     ),
   ];
 
-  List<OpenSourceContribution> _openSourceContributions = [
+  final List<OpenSourceContribution> _openSourceContributions = [
     OpenSourceContribution(
       title: "Release to Trigger",
       description:
@@ -323,7 +385,7 @@ class HomePageViewModel extends ChangeNotifier {
       "Git",
       "Firebase",
       "CI/CD",
-      "Fastlane",
+      "Fastlane Automation",
       "Android Studio",
       "VS Code",
       "Jira",

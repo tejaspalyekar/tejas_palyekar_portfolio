@@ -69,65 +69,65 @@ class ProjectDetailScreen extends StatelessWidget {
   }
 
   Widget _buildImageCarousel(BuildContext context) {
-    if (project.title == "Kalpavriksha") {
-      return Column(
-        children: [
-          Expanded(
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Scaffold(
-                      appBar: AppBar(
-                        title: Text('${project.title} - Image 1'),
+    // if (project.title == "Kalpavriksha") {
+    return Column(
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Scaffold(
+                    appBar: AppBar(
+                      title: Text('${project.title} - Image 1'),
+                    ),
+                    body: PhotoView(
+                      imageProvider: AssetImage(
+                        project.imagePath,
                       ),
-                      body: PhotoView(
-                        imageProvider: AssetImage(
-                          'assets/images/kalpakrusha/kalpakrusha.png',
-                        ),
-                        minScale: PhotoViewComputedScale.contained,
-                        maxScale: PhotoViewComputedScale.covered * 2,
-                        backgroundDecoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.background,
-                        ),
+                      minScale: PhotoViewComputedScale.contained,
+                      maxScale: PhotoViewComputedScale.covered * 2,
+                      backgroundDecoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.background,
                       ),
+                    ),
+                  ),
+                ),
+              );
+            },
+            child: Image.asset(
+              project.imagePath,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) {
+                return Container(
+                  color: Theme.of(context).colorScheme.surfaceVariant,
+                  child: Center(
+                    child: Icon(
+                      Icons.image_not_supported,
+                      size: 48,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
                     ),
                   ),
                 );
               },
-              child: Image.asset(
-                'assets/images/kalpakrusha/kalpakrusha.png',
-                fit: BoxFit.contain,
-                errorBuilder: (context, error, stackTrace) {
-                  return Container(
-                    color: Theme.of(context).colorScheme.surfaceVariant,
-                    child: Center(
-                      child: Icon(
-                        Icons.image_not_supported,
-                        size: 48,
-                        color: Theme.of(context).colorScheme.onSurfaceVariant,
-                      ),
-                    ),
-                  );
-                },
-              ),
             ),
           ),
-        ],
-      );
-    } else {
-      return Container(
-        color: Theme.of(context).colorScheme.surfaceVariant,
-        child: Center(
-          child: Icon(
-            Icons.image_not_supported,
-            size: 48,
-            color: Theme.of(context).colorScheme.onSurfaceVariant,
-          ),
         ),
-      );
-    }
+      ],
+    );
+    // } else {
+    //   return Container(
+    //     color: Theme.of(context).colorScheme.surfaceVariant,
+    //     child: Center(
+    //       child: Icon(
+    //         Icons.image_not_supported,
+    //         size: 48,
+    //         color: Theme.of(context).colorScheme.onSurfaceVariant,
+    //       ),
+    //     ),
+    //   );
+    // }
   }
 
   Widget _buildProjectInfo(BuildContext context) {

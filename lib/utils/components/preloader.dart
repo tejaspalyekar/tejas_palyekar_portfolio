@@ -13,7 +13,7 @@ class _PreloaderState extends State<Preloader> {
   bool _isLoading = true;
 
   @override
-  void initState() {
+  void initState() { 
     super.initState();
     _loadAssets();
   }

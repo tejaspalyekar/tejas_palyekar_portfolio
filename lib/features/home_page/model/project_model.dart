@@ -7,8 +7,10 @@ class Project {
   final bool featured;
   final String longDescription;
   final List<String> keyHighlights;
+  final String imagePath;
 
   Project({
+    required this.imagePath,
     required this.title,
     required this.description,
     required this.technologies,
