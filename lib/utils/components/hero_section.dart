@@ -204,8 +204,9 @@ class _HeroSectionState extends State<HeroSection>
                           ),
                           const SizedBox(height: 35),
                           Text(
-                            'A passionate Flutter expert and Mobile App Developer with a proven track record of building exceptional applications. Leveraging deep expertise in Flutter and experience with React Native and Android, I deliver high-performance, user-centric solutions with clean architecture and seamless deployment.',
-                            textAlign: TextAlign.center,
+                            softWrap: true,
+                            'Passionate and results-driven Flutter developer with strong expertise in building fast, scalable, and user-friendly cross-platform mobile applications. I have successfully delivered apps across diverse industries, including FMCG, Healthcare, Consumer Loyalty & Rewards, Online Auctions, Security, and Sales Force Automation (SFA). With a deep understanding of clean architecture (MVVM/MVC), state management(Provider,Getx & Bloc), and performance optimization techniques, I ensure high-quality code, intuitive UI/UX, and seamless cross-platform functionality.',
+                            textAlign: TextAlign.justify,
                             style: GoogleFonts.poppins(
                               fontSize: bodyFontSize,
                               color: homeViewModel.appTheme
@@ -252,7 +253,9 @@ class _HeroSectionState extends State<HeroSection>
                                 ),
                                 const SizedBox(height: 35),
                                 Text(
-                                  'A passionate Flutter expert and Mobile App Developer with a proven track record of building exceptional applications. Leveraging deep expertise in Flutter and experience with React Native and Android, I deliver high-performance, user-centric solutions with clean architecture and seamless deployment.',
+                                  softWrap: true,
+                                  'Passionate and results-driven Flutter developer with strong expertise in building fast, scalable, and user-friendly cross-platform mobile applications. I have successfully delivered apps across diverse industries, including FMCG, Healthcare, Consumer Loyalty & Rewards, Online Auctions, Security, and Sales Force Automation (SFA). With a deep understanding of clean architecture (MVVM/MVC), state management(Provider,Getx & Bloc), and performance optimization techniques, I ensure high-quality code, intuitive UI/UX, and seamless cross-platform functionality.',
+                                  textAlign: TextAlign.justify,
                                   style: GoogleFonts.poppins(
                                     fontSize: bodyFontSize,
                                     color: homeViewModel.appTheme

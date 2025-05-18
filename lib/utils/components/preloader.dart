@@ -13,7 +13,7 @@ class _PreloaderState extends State<Preloader> {
   bool _isLoading = true;
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     _loadAssets();
   }
@@ -25,8 +25,21 @@ class _PreloaderState extends State<Preloader> {
         precacheImage(
             const AssetImage('assets/images/profile_image.jpeg'), context),
         precacheImage(
-            const AssetImage('assets/images/kalpakrusha/kalpakrusha.png'),
+            const AssetImage('assets/images/kalpakrusha/mock_up_pkf.png'),
             context),
+        precacheImage(
+            const AssetImage('assets/images/aatmaya_farm/aatmaya_farms.png'),
+            context),
+        precacheImage(
+            const AssetImage(
+                'assets/images/aatmaya_farm/aatmaya_farms_delivery.png'),
+            context),
+        precacheImage(
+            const AssetImage(
+                'assets/images/release_to_trigger/mock_up_release_to_trigger.png'),
+            context),
+        precacheImage(
+            const AssetImage('assets/images/caparol/caparol.png'), context),
         rootBundle.load('assets/lottie/scroll_down_lottie.json'),
         rootBundle.load('assets/lottie/light_scroll_down_lottie.json'),
         rootBundle.load('assets/icons/whatsAppIcon.png'),

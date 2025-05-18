@@ -49,7 +49,7 @@ class HomePageViewModel extends ChangeNotifier {
       imagePath: 'assets/images/kalpakrusha/mock_up_pkf.png',
     ),
     Project(
-      imagePath: 'assets/images/Image-Placeholder.png',
+      imagePath: 'assets/images/aatmaya_farm/aatmaya_farms.png',
       title: "Aatmaya Farms",
       description:
           "E-commerce app connecting urban consumers to organic farm products. Features real-time inventory, Google Maps integration, in-app wallet, subscriptions, and multi-language support.",
@@ -79,14 +79,14 @@ class HomePageViewModel extends ChangeNotifier {
       ],
     ),
     Project(
-      imagePath: 'assets/images/Image-Placeholder.png',
+      imagePath: 'assets/images/aatmaya_farm/aatmaya_farms_delivery.png',
       title: "Aatmaya Farms Delivery Partner",
       description:
           "Built for delivery agents & distributors. Features include delivery scheduling, real-time updates, role-based login, delivery order rearrangement, and performance tracking.",
       technologies: [
         "Flutter(Android)",
-        "Getx for State Management"
-            "Firebase Notifications",
+        "Getx for State Management",
+        "Firebase Notifications",
         "Fastlane Automation"
       ],
       playStoreUrl:
@@ -256,23 +256,25 @@ class HomePageViewModel extends ChangeNotifier {
       ],
     ),
     Project(
-      imagePath: 'assets/images/Image-Placeholder.png',
+      imagePath: 'assets/images/n2c/n2c.png',
       title: "N2C",
       description:
-          "Native Android app for N2C Copra with bug fixes, improvements, and deployment.",
+          "Sell copra with ease – manage offers, approvals, and invoices instantly.",
       technologies: ["Java", "Android SDK", "Firebase"],
       featured: false,
       longDescription:
-          "N2C is a native Android application developed in Java. The project involved implementing bug fixes, performance improvements, and managing the deployment process.",
+          "n2c (Nattu Copra) is a dedicated B2B FMCG app designed to streamline the coconut trading process for vendors. Built for efficiency and transparency, the app enables sellers to effortlessly submit offers, view the status of their bids (accepted/rejected), and manage all related invoices and transactions in one place. Whether you're a small-scale vendor or a bulk supplier, n2c helps you stay in control of your coconut business with real-time updates, digital records, and an intuitive user interface.",
       keyHighlights: [
+        "Track offer status (accepted / rejected)",
+        "View and download invoices securely",
         "Native Android Development",
         "Performance Optimization",
         "Bug Fixes",
-        "Deployment Management"
+        "Google Analytics & Crashlytics"
       ],
     ),
     Project(
-      imagePath: 'assets/images/Image-Placeholder.png',
+      imagePath: 'assets/images/harrj/harrj.png',
       title: "Harrj",
       description:
           "Online auction app supporting both regular and live bidding via Zoom. Features include bid history, seller/buyer feedback, and multi-language support (English, Arabic).",
@@ -372,32 +374,45 @@ class HomePageViewModel extends ChangeNotifier {
   final Map<String, List<String>> _skills = {
     "Mobile Development": [
       "Flutter",
-      "React Native",
-      "Dart",
       "UI/UX Design",
-      "Firebase",
-      "State Management",
       "RESTful APIs",
-      "WebRTC"
+      "State Management",
+      "Native Android Development",
+      "React Native",
     ],
-    "Programming Languages": ["Dart", "Java", "Python", "JavaScript"],
+    "Flutter Framework": [
+      "Mobile Application Development(Android & IOS)",
+      "Desktop Applications",
+      "Web Applications",
+      "Provider,Getx,Bloc",
+      "MVVM,MVC",
+      "Clean Architecture"
+    ],
+    "Programming Languages": ["Dart", "Java", "JavaScript", "SQL"],
     "Tools & Technologies": [
       "Git",
       "Firebase",
       "CI/CD",
-      "Fastlane Automation",
+      "Windows",
+      "MacOS",
+      "Xcode",
+      "Google Maps",
+      "WebRTC",
+      "Zoom SDK",
+      "Jitsi SDK",
       "Android Studio",
       "VS Code",
       "Jira",
-      "Google Maps",
-      "Zoom SDK",
-      "Jitsi SDK"
+      "Ai Tools",
+      "Node js",
+      "Express js",
+      "Appium",
+      "Figma"
     ],
     "Security & Payments": [
       "Mobile App Security",
       "SSL Pinning",
       "Secure Storage",
-      "Authentication",
       "PayU Integration",
       "Easebuzz Integration"
     ],
@@ -405,9 +420,8 @@ class HomePageViewModel extends ChangeNotifier {
       "Play Store Deployment",
       "App Store Deployment",
       "Fastlane Automation",
-      "CI/CD Pipeline",
-      "App Signing"
-    ]
+      "CI/CD",
+    ],
   };
 
   // Getters
