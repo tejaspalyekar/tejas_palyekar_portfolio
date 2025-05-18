@@ -52,7 +52,7 @@ class HomePageViewModel extends ChangeNotifier {
       imagePath: 'assets/images/aatmaya_farm/aatmaya_farms.png',
       title: "Aatmaya Farms",
       description:
-          "E-commerce app connecting urban consumers to organic farm products. Features real-time inventory, Google Maps integration, in-app wallet, subscriptions, and multi-language support.",
+          "E-commerce app connecting urban consumers to organic farm products. Features real-time inventory, Google Maps integration, in-app wallet, subscriptions, calendar, Coupons & Secured Payment Integration",
       technologies: [
         "Flutter (Cross-platform for Android & iOS)",
         "Firebase",
@@ -65,7 +65,7 @@ class HomePageViewModel extends ChangeNotifier {
       appStoreUrl: "https://apps.apple.com/in/app/aatmaya-farms/id6532603037",
       featured: true,
       longDescription:
-          "Aatmaya Farms is an e-commerce platform that connects urban consumers directly to organic farm products. The app features real-time inventory management, Google Maps integration for delivery tracking, in-app wallet for seamless payments, subscription services for regular deliveries, and multi-language support (English, Hindi). The project includes both customer and delivery partner apps with Fastlane integration for automated deployment.",
+          "Aatmaya Farms is an e-commerce platform that connects urban consumers directly to organic farm products. The app features real-time inventory management, Google Maps integration for delivery tracking, in-app wallet for seamless payments, subscription services for regular deliveries. The project includes both customer and delivery partner apps with Fastlane integration for automated deployment.",
       keyHighlights: [
         "Google Maps Integration",
         "Easebuzz Payment Gateway",
@@ -82,9 +82,9 @@ class HomePageViewModel extends ChangeNotifier {
       imagePath: 'assets/images/aatmaya_farm/aatmaya_farms_delivery.png',
       title: "Aatmaya Farms Delivery Partner",
       description:
-          "Built for delivery agents & distributors. Features include delivery scheduling, real-time updates, role-based login, delivery order rearrangement, and performance tracking.",
+          "Built for delivery agents & distributors. Features include delivery scheduling, real-time updates, role-based login, delivery order rearrangement, and multi-language support.",
       technologies: [
-        "Flutter(Android)",
+        "Flutter",
         "Getx for State Management",
         "Firebase Notifications",
         "Fastlane Automation"
@@ -93,7 +93,7 @@ class HomePageViewModel extends ChangeNotifier {
           "https://play.google.com/store/apps/details?id=com.milkeshav.aatmayafarms_delivery",
       featured: true,
       longDescription:
-          "The Aatmaya Farms Delivery Partner app is designed for delivery agents and distributors. It includes features like delivery scheduling, real-time order updates, role-based login, the ability to rearrange delivery orders, and performance tracking. The app is integrated with Fastlane for automated deployment and testing.",
+          "The Aatmaya Farms Delivery Partner app is designed for delivery agents and distributors. It includes features like delivery scheduling, real-time order updates, role-based login, the ability to rearrange delivery orders, and multi-language support (English, Hindi). The app is integrated with Fastlane for automated deployment and testing.",
       keyHighlights: [
         "Delivery Scheduling",
         "Real-time Updates",

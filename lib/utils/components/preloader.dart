@@ -60,18 +60,8 @@ class _PreloaderState extends State<Preloader> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoading) {
-      return MaterialApp(
-        home: Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.background,
-          body: Center(
-            child: CircularProgressIndicator(
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-        ),
-      );
-    }
-    return const SplashScreen();
+    return SplashScreen(
+      isLoading: _isLoading,
+    );
   }
 }

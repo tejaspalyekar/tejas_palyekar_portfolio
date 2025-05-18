@@ -111,7 +111,7 @@ class _HeroSectionState extends State<HeroSection>
           return Container(
             margin: EdgeInsets.symmetric(
               horizontal: isMobile ? 12 : 20,
-              vertical: isMobile ? 20 : 40,
+              vertical: 10,
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24),
@@ -139,7 +139,7 @@ class _HeroSectionState extends State<HeroSection>
             ),
             padding: EdgeInsets.symmetric(
               horizontal: isMobile ? 20 : 40,
-              vertical: isMobile ? 30 : 60,
+              vertical: 30,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
