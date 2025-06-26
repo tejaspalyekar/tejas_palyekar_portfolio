@@ -31,7 +31,8 @@ class HomePageViewModel extends ChangeNotifier {
       ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.pkf.kalpavriksha",
-      appStoreUrl: "https://apps.apple.com/in/app/kalpavriksha/id6472012000",
+      appStoreUrl:
+          "https://apps.apple.com/in/app/parachute-kalpavriksha/id1629025176?platform=iphone",
       featured: true,
       longDescription:
           "India's #1 app for Coconut Farmers with 100K+ downloads. Features include real-time COPRA pricing, Google & Apple login support, multilingual support, farmer & trader role, weather updates, government scheme, fertilizer calculator, Ask an expert and many more features. Kalpavriksha is designed to help manage farmer products(coconut) effectively and increase productivity through industry best practices. The app provides daily COPRA pricing updates and real-time expert consultation via helpline (1800264646). It serves as a platform connecting farmers and traders for price discovery and trading of coconuts and related products. The app features market prices, multilingual support, and is specifically designed for Indian coconut farmers, completely free of cost.",
@@ -62,7 +63,8 @@ class HomePageViewModel extends ChangeNotifier {
       ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.milkeshav.aatmaya",
-      appStoreUrl: "https://apps.apple.com/in/app/aatmaya-farms/id6532603037",
+      appStoreUrl:
+          "https://apps.apple.com/in/app/aatmaya-farms/id6532603037?platform=iphone",
       featured: true,
       longDescription:
           "Aatmaya Farms is an e-commerce platform that connects urban consumers directly to organic farm products. The app features real-time inventory management, Google Maps integration for delivery tracking, in-app wallet for seamless payments, subscription services for regular deliveries. The project includes both customer and delivery partner apps with Fastlane integration for automated deployment.",
@@ -116,6 +118,8 @@ class HomePageViewModel extends ChangeNotifier {
       ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.foodFitness.doctor",
+      appStoreUrl:
+          "https://apps.apple.com/us/app/food-fitness-doctor/id6747105521?platform=iphone",
       featured: true,
       longDescription:
           "Food Fitness Doctor App is a comprehensive healthcare platform for medical professionals. The platform enables live and clinic appointments, integrates PayU for secure payments, uses Jitsi SDK for video consultations, and includes e-commerce features for health products.",
@@ -140,6 +144,8 @@ class HomePageViewModel extends ChangeNotifier {
       ],
       playStoreUrl:
           "https://play.google.com/store/apps/details?id=com.food_fitness.patient",
+      appStoreUrl:
+          "https://apps.apple.com/us/app/foodrx/id6747105319?platform=iphone",
       featured: true,
       longDescription:
           "Food Fitness is a patient-facing application that allows users to book appointments with doctors, attend video consultations, purchase health products, and track their health journey. The app features a user-friendly interface and secure payment integration.",
@@ -164,6 +170,10 @@ class HomePageViewModel extends ChangeNotifier {
         "Dio for REST APIs Integration",
         "Provider for state management"
       ],
+      playStoreUrl:
+          "https://play.google.com/store/apps/details?id=com.caparol.app",
+      appStoreUrl:
+          "https://apps.apple.com/in/app/caparol-club/id6745784820?platform=iphone",
       featured: false,
       longDescription:
           "Caparol Club is a reward-based mobile application designed for Caparol, one of Germany's top paint manufacturers. Tailored specifically for professional painters, the app allows users to accumulate points by scanning QR codes on paint cans and uploading purchase invoices. These points are credited to their in-app wallet and can be redeemed directly into their bank accounts or used to purchase exclusive coupons and offers. The app offers a seamless multilingual experience with support for both English (LTR) and Arabic (RTL), automatically adjusting alignment and layout based on the selected language. Firebase powers the real-time notification system and in-app messaging to keep users informed and engaged. The app was developed using the MVVM architecture, ensuring maintainability, scalability, and adherence to clean coding standards. With an intuitive user interface and user-focused experience, the app delivers excellent performance and usability across different regions",
